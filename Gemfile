@@ -21,13 +21,13 @@ gem 'graphql', '1.10.0'
 gem 'graphql-query-resolver', '0.2.0'
 gem 'search_object', '1.2.3'
 gem 'search_object_graphql', '0.3.1'
+gem "dotenv-rails"
 
 group :development, :test do
   gem 'byebug', '11.1.0', platforms: %i(mri mingw x64_mingw)
   gem 'factory_bot_rails', '5.1.1'
   gem 'graphiql-rails', '1.5.0'
   gem 'rubocop', '0.79.0'
-  gem "dotenv-rails"
 end
 
 group :development do
