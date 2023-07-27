@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
 
   validates :title, presence: true, length: { minimum: 3 }
   validates :description, presence: true, length: { minimum: 5 }
-  validates :slug, uniqueness: true, case_sensitive: false
+  validates :slug, uniqueness: true
 
   after_create :set_slug
   after_create :set_image_url
