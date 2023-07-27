@@ -112,7 +112,6 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.4)
     minitest (5.19.0)
     msgpack (1.7.2)
     net-imap (0.3.7)
@@ -125,10 +124,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.3)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
-    nokogiri (1.15.3-x86_64-linux)
+    nokogiri (1.15.3-x86_64-darwin)
       racc (~> 1.4)
     parallel (1.23.0)
     parser (3.2.2.3)
@@ -218,8 +214,7 @@ GEM
     zeitwerk (2.6.9)
 
 PLATFORMS
-  ruby
-  x86_64-linux
+  x86_64-darwin-21
 
 DEPENDENCIES
   bcrypt (= 3.1.13)
@@ -249,4 +244,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   1.17.2
+   2.4.17
