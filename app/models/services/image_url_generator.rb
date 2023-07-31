@@ -15,6 +15,7 @@ class Services::ImageUrlGenerator
   private
 
   def create_image_url(id)
+    puts "variable: #{ENV['CLOUDINARY_CLOUD_NAME']}"
     return "https://res.cloudinary.com/#{ENV['CLOUDINARY_CLOUD_NAME']}/image/upload/image-#{find_image_id}"
   end
 
