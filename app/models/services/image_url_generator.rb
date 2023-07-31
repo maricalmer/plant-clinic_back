@@ -19,6 +19,6 @@ class Services::ImageUrlGenerator
   end
 
   def find_image_id
-    @id - 13
+    @id - 16
   end
 end
