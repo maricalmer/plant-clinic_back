@@ -18,6 +18,6 @@ class Post < ActiveRecord::Base
   end
 
   def set_image_url
-    Services::ImageUrlGenerator.new(id: id, client: self).assign_image_url
+    Services::ImageUrlGenerator.new(slug: slug, client: self).assign_image_url
   end
 end
