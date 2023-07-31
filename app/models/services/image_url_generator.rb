@@ -15,6 +15,10 @@ class Services::ImageUrlGenerator
   private
 
   def create_image_url(id)
-    return "https://res.cloudinary.com/#{ENV['CLOUDINARY_CLOUD_NAME']}/image/upload/image-#{id}"
+    return "https://res.cloudinary.com/#{ENV['CLOUDINARY_CLOUD_NAME']}/image/upload/image-#{find_image_id}"
+  end
+
+  def find_image_id
+    id - 13
   end
 end
