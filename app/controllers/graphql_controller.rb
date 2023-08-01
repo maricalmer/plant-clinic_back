@@ -15,6 +15,7 @@ class GraphqlController < ApplicationController
     }
     puts "CONTEXT FROM GRAPHQL CONTROLLER: #{context}"
     puts "SESSION FROM GRAPHQL CONTROLLER: #{session}"
+    puts "SESSION_TOKEN FROM GRAPHQL CONTROLLER (execute): #{session[:token]}"
     result = PlantClinicSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
   rescue StandardError => e
@@ -25,7 +26,7 @@ class GraphqlController < ApplicationController
   private
 
   def current_user
-    puts "SESSION_TOKEN FROM GRAPHQL CONTROLLER: #{session[:token]}"
+    puts "SESSION_TOKEN FROM GRAPHQL CONTROLLER (current_user): #{session[:token]}"
     return unless session[:token]
 
     AuthToken.user_from_token(session[:token])
