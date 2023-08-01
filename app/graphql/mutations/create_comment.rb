@@ -9,7 +9,7 @@ module Mutations
       Comment.create!(
         content: content,
         post: PlantClinicSchema.object_from_id(post_id, context),
-        user: User.first
+        user: context[:current_user]
         # ^^ to_be_removed and substituted by -> user: context[:current_user]
       )
 

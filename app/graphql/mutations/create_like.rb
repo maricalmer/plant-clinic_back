@@ -7,7 +7,7 @@ module Mutations
     def resolve(post_id: nil)
       Like.create!(
         post: PlantClinicSchema.object_from_id(post_id, context),
-        user: User.first
+        user: context[:current_user]
         # user: context[:current_user]
       )
     rescue ActiveRecord::RecordInvalid => e

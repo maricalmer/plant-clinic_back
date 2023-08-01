@@ -9,7 +9,7 @@ module Mutations
       Post.create!(
         description: description,
         title: title,
-        user: User.first
+        user: context[:current_user]
         # ^^ to_be_removed and substituted by -> user: context[:current_user]
       )
 
