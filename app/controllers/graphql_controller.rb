@@ -13,6 +13,7 @@ class GraphqlController < ApplicationController
       current_user: current_user
     }
     puts "CONTEXT: #{context}"
+    puts "SESSION_TOKEN: #{session[:token]}"
     result = PlantClinicSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
   rescue StandardError => e
