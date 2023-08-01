@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://mellifluous-arithmetic-b968bd.netlify.app', 'https://mellifluous-arithmetic-b968bd.netlify.app/create'
+    origins 'https://mellifluous-arithmetic-b968bd.netlify.app', 'https://mellifluous-arithmetic-b968bd.netlify.app/create', 'https://mellifluous-arithmetic-b968bd.netlify.app/create', 'https://peaceful-cliffs-79833-a8770ca52690.herokuapp.com/graphql'
 
     resource '*',
       headers: :any,
