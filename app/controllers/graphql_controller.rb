@@ -14,7 +14,7 @@ class GraphqlController < ApplicationController
       current_user: current_user
     }
     puts "CONTEXT FROM GRAPHQL CONTROLLER: #{context}"
-    puts "SESSION: #{session}"
+    puts "SESSION FROM GRAPHQL CONTROLLER: #{session}"
     result = PlantClinicSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
   rescue StandardError => e
