@@ -6,6 +6,7 @@ module Mutations
     type Types::PostType
 
     def resolve(description: nil, title: nil)
+      puts context
       Post.create!(
         description: description,
         title: title,
