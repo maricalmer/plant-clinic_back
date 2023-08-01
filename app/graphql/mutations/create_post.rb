@@ -6,7 +6,7 @@ module Mutations
     type Types::PostType
 
     def resolve(description: nil, title: nil)
-      puts context
+      puts "CONTEXT: #{context[:current_user]}"
       Post.create!(
         description: description,
         title: title,
