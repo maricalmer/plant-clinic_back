@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://mellifluous-arithmetic-b968bd.netlify.app:80'
+    origins '*'
 
     resource '*',
       headers: :any,
