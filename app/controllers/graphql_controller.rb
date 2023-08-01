@@ -25,6 +25,7 @@ class GraphqlController < ApplicationController
   private
 
   def current_user
+    puts "SESSION_TOKEN FROM GRAPHQL CONTROLLER: #{session[:token]}"
     return unless session[:token]
 
     AuthToken.user_from_token(session[:token])
