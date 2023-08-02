@@ -24,6 +24,7 @@ module Mutations
       puts token
 
       context[:session][:token] = token
+      $token = token
 
       { user: user, token: token }
     end
