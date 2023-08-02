@@ -16,6 +16,8 @@ module Mutations
       return unless user.authenticate(credentials[:password])
 
       token = AuthToken.token_for_user(user)
+      puts "TOKEN FROM SIGN IN MUTATION:"
+      puts token
 
       context[:session][:token] = token
 
