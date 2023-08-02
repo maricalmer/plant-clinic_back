@@ -17,7 +17,7 @@ gem 'rails'
 gem 'pg'
 gem 'validate_url', '1.0.8'
 
-gem 'graphql', '1.10.0'
+gem 'graphql'
 gem 'graphql-query-resolver', '0.2.0'
 gem 'search_object', '1.2.3'
 gem 'search_object_graphql', '0.3.1'
