@@ -11,6 +11,8 @@ module Mutations
       return unless credentials
 
       user = User.find_by email: credentials[:email]
+      puts "USER FROM SIGN IN MUTATION:"
+      puts user
       return unless user
 
       return unless user.authenticate(credentials[:password])
