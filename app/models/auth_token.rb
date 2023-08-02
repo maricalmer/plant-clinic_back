@@ -8,8 +8,6 @@ module AuthToken
   end
 
   def user_from_token(token)
-    puts "TOKEN from AUTH_TOKEN"
-    puts token
     return if token.blank?
 
     user_id = crypt.decrypt_and_verify(token).gsub(PREFIX, '').to_i

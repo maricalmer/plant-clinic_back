@@ -4,6 +4,8 @@ class GraphqlController < ApplicationController
   # but you'll have to authenticate your user separately
 
   def execute
+    puts "PARAMS:"
+    puts params
     variables = prepare_variables(params[:variables])
     query = params[:query]
     operation_name = params[:operationName]
