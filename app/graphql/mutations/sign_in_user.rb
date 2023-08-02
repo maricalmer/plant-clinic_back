@@ -8,8 +8,10 @@ module Mutations
     field :user, Types::UserType, null: true
 
     def resolve(credentials: nil)
+      puts "RESOLVE METHOD SIGN IN MUTATION:"
       return unless credentials
-
+      puts "CREDENTIALS FROM SIGN IN MUTATION:"
+      puts credentials
       user = User.find_by email: credentials[:email]
       puts "USER FROM SIGN IN MUTATION:"
       puts user
