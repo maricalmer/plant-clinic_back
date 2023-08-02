@@ -1,7 +1,3 @@
 class ApplicationController < ActionController::Base
-  skip_before_filter :verify_authenticity_token, if: :json_request?
-
-  def json_request?
-    request.format.json?
-  end
+  skip_forgery_protection
 end
