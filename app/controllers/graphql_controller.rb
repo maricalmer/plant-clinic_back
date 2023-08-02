@@ -12,6 +12,7 @@ class GraphqlController < ApplicationController
       current_user: current_user
     }
     puts "CONTEXT FROM GRAPHQL CONTROLLER: #{context}"
+    puts "CURRENT_USER FROM GRAPHQL CONTROLLER: #{context[:current_user]}"
     puts "SESSION FROM GRAPHQL CONTROLLER: #{session}"
     puts "SESSION_TOKEN FROM GRAPHQL CONTROLLER (execute): #{session[:token]}"
     result = PlantClinicSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
