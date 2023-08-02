@@ -7,6 +7,7 @@ module Mutations
 
     def resolve(description: nil, title: nil)
       puts "CONTEXT FROM CREATE POST: #{context}"
+      puts "SESSION FROM CREATE POST: #{session}"
       Post.create!(
         description: description,
         title: title,
