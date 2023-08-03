@@ -16,6 +16,7 @@ module Mutations
         user: context[:current_user]
         # ^^ to_be_removed and substituted by -> user: context[:current_user]
       )
+      flash.now[:notice] = "Picture will take a second to be displayed. Refresh the page"
 
     rescue ActiveRecord::RecordInvalid => e
       GraphQL::ExecutionError.new("Invalid input: #{e.record.errors.full_messages.join(', ')}")
