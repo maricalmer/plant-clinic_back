@@ -17,10 +17,9 @@ class GraphqlController < ApplicationController
   private
 
   def current_user
-    # return unless $session_token
-    return unless session[:token]
+    return unless $session_token
 
-    AuthToken.user_from_token(session[:token])
+    AuthToken.user_from_token($session_token)
 
   rescue ActiveSupport::MessageVerifier::InvalidSignature
     nil

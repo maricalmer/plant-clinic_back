@@ -19,8 +19,7 @@ module Mutations
 
       token = AuthToken.token_for_user(user)
 
-      # $session_token = token
-      context[:session][:token] = token
+      $session_token = token
 
       { user: user, token: token }
     end
