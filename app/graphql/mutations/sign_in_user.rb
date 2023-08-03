@@ -8,22 +8,17 @@ module Mutations
     field :user, Types::UserType, null: true
 
     def resolve(credentials: nil)
-      puts "RESOLVE METHOD SIGN IN MUTATION:"
+
       return unless credentials
-      puts "CREDENTIALS FROM SIGN IN MUTATION:"
-      puts credentials
+
       user = User.find_by email: credentials[:email]
-      puts "USER FROM SIGN IN MUTATION:"
-      puts user
+
       return unless user
 
       return unless user.authenticate(credentials[:password])
 
       token = AuthToken.token_for_user(user)
-      puts "TOKEN FROM SIGN IN MUTATION:"
-      puts token
 
-      context[:session][:token] = token
       $session_token = token
 
       { user: user, token: token }

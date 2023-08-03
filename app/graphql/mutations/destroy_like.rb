@@ -1,5 +1,4 @@
 module Mutations
-  # Don't forget to change to Mutations::BaseMutation
   class DestroyLike < BaseMutation
     def ready?(**_args)
       if !context[:current_user]
