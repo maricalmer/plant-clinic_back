@@ -93,7 +93,11 @@ GEM
     graphiql-rails (1.5.0)
       railties
       sprockets-rails
+<<<<<<< HEAD
     graphql (1.13.19)
+=======
+    graphql (1.10.0)
+>>>>>>> parent of 33c5b8f (fix: new gemfile.lock)
     graphql-query-resolver (0.2.0)
       graphql (~> 1.0, >= 1.0.0)
     i18n (1.14.1)
@@ -137,7 +141,11 @@ GEM
     public_suffix (5.0.3)
     puma (3.12.6)
     racc (1.7.1)
+<<<<<<< HEAD
     rack (2.2.8)
+=======
+    rack (2.2.7)
+>>>>>>> parent of 33c5b8f (fix: new gemfile.lock)
     rack-cors (2.0.1)
       rack (>= 2.0.0)
     rack-test (2.1.0)
@@ -156,7 +164,11 @@ GEM
       activesupport (= 7.0.6)
       bundler (>= 1.15.0)
       railties (= 7.0.6)
+<<<<<<< HEAD
     rails-dom-testing (2.2.0)
+=======
+    rails-dom-testing (2.1.1)
+>>>>>>> parent of 33c5b8f (fix: new gemfile.lock)
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
@@ -214,7 +226,11 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+<<<<<<< HEAD
     zeitwerk (2.6.11)
+=======
+    zeitwerk (2.6.9)
+>>>>>>> parent of 33c5b8f (fix: new gemfile.lock)
 
 PLATFORMS
   x86_64-darwin-21
@@ -229,7 +245,11 @@ DEPENDENCIES
   factory_bot_rails (= 5.1.1)
   graphiql-rails (= 1.5.0)
   graphql
+<<<<<<< HEAD
   graphql-query-resolver
+=======
+  graphql-query-resolver (= 0.2.0)
+>>>>>>> parent of 33c5b8f (fix: new gemfile.lock)
   listen (~> 3.8)
   pg
   puma (~> 3.12)
