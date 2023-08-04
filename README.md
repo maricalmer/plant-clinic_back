@@ -1,95 +1,96 @@
+### [plant-clinic](https://mellifluous-arithmetic-b968bd.netlify.app/), a copycat of the subreddit r/plantclinic powered by GraphQL API
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+The core function of plant-clinic is to diagnose sick plants. If a user wonders "what's wrong with my plant?", the community helps diagnose and treat it! A registered user can:
+- create a post including picture of the plant
+- comment on a post
+- scroll through posts list
+- search for posts within posts list
 
-* System dependencies
+## Web App
 
-* Configuration
+plant-clinic is developed using:
+- Rails API with GraphQL for backend. Supported by PostgreSQL database and running on Heroku - [GitHub repo](https://github.com/maricalmer/plant-clinic_backend)
+- React with GraphQL + Apollo Client for frontend. Deployed on Netlify - [GitHub repo](https://github.com/maricalmer/plant-clinic_frontend)
 
-* Database creation
+## Rails Server
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-////////////
+![ruby](https://img.shields.io/badge/Ruby-3.1.2-F32C24?style=for-the-badge&logo=ruby&logoColor=white) ![Rails](https://img.shields.io/badge/Rails-7.0.6-C52F24?style=for-the-badge&logo=rubyonrails&logoColor=white) ![GraphQL](https://img.shields.io/badge/graphql-16.7.1-F6009B?style=for-the-badge&logo=graphql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14.8-4764BE?style=for-the-badge&logo=postgresql&logoColor=white)
 
 
-# Getting Started with Create React App
+![Rails](https://img.shields.io/badge/React-18.2-139ECA?style=for-the-badge&logo=react&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript&logoColor=white) ![Apollo](https://img.shields.io/badge/apollo-3.7.17-2E1D80?style=for-the-badge&logo=apollographql&logoColor=white) ![GraphQL](https://img.shields.io/badge/graphql-16.7.1-F6009B?style=for-the-badge&logo=graphql&logoColor=white) ![tailwindcss](https://img.shields.io/badge/tailwindcss-3.2.2-37BCF8?style=for-the-badge&logo=tailwindcss&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-3-264DE4?style=for-the-badge&logo=css&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![FontAwesome](https://img.shields.io/badge/FontAwesome-5-528CD7?style=for-the-badge&logo=fontawesome&logoColor=white)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Ruby gems (non exhaustive)
 
-## Available Scripts
+[![graphql](https://img.shields.io/badge/graphql-1.13.19-red.svg)](https://rubygems.org/gems/graphql) [![graphiql-rails](https://img.shields.io/badge/graphiql--rails-1.9.0-red.svg)](https://rubygems.org/gems/graphiql-rails) [![bcrypt](https://img.shields.io/badge/bcrypt-3.1.19-red.svg)](https://rubygems.org/gems/bcrypt) [![rack-cors](https://img.shields.io/badge/rack--cors-2.0.1-red.svg)](https://rubygems.org/gems/rack-cors) [![ar_lazy_preload](https://img.shields.io/badge/ar_lazy_preload-2.0.0-red.svg)](https://rubygems.org/gems/ar_lazy_preload) [![dotenv-rails](https://img.shields.io/badge/dotenv--rails-2.8.1-red.svg)](https://rubygems.org/gems/dotenv-rails) [![graphql-query-resolver](https://img.shields.io/badge/graphql--query--resolver-0.2.0-red.svg)](https://rubygems.org/gems/graphql-query-resolver)
 
-In the project directory, you can run:
+## Run Locally
 
-### `yarn start`
+Clone the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+  git clone git@github.com:maricalmer/maricalmer.github.io.git my-project-frontend
+  git clone git@github.com:maricalmer/maricalmer.github.io.git my-project-backend
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Go to the project directory and remove git logs
 
-### `yarn test`
+```bash
+  cd my-project-frontend
+  rm -rf .git
+  cd ..
+  cd my-project-backend
+  rm -rf .git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install dependencies
 
-### `yarn build`
+```bash
+  bundle install
+  yarn install
+  cd ..
+  cd my-project-frontend
+  yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Make sure you have ./node_modules/.bin in your $PATH:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  echo $PATH
+  # You should see `./node_modules/.bin` in the list
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If it's not the case, add it:
 
-### `yarn eject`
+```bash
+  cd ~/code/dotfiles/<your_github_nickname>
+  echo 'export PATH="./bin:./node_modules/.bin:${PATH}"' >> zshrc
+  cd ~/code/<your_github_nickname>/my-project
+  source ~/.zshrc
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  cd ..
+  cd my-project-backend
+  rails s
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In a new terminal
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  cd ..
+  cd my-project-frontend
+  yarn start
+```
 
-## Learn More
+## Visit the page!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[plant-clinic](https://mellifluous-arithmetic-b968bd.netlify.app/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
