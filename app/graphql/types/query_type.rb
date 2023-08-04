@@ -1,7 +1,7 @@
 module Types
   class QueryType < BaseObject
-    add_field GraphQL::Types::Relay::NodeField
-    add_field GraphQL::Types::Relay::NodesField
+    add_field GraphQL::Types::Relay::HasNodeField
+    add_field GraphQL::Types::Relay::HasNodesField
 
     field :fetch_post, resolver: Queries::FetchPost
     field :all_posts, resolver: Resolvers::PostsSearch
