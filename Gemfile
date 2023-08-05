@@ -7,21 +7,21 @@ end
 
 ruby '3.1.2'
 
-gem 'sprockets'
+gem 'sprockets', '~> 3.7.2'
 gem 'sprockets-rails'
-gem 'bcrypt'
-gem 'bootsnap'
-gem 'puma'
-gem 'rack-cors'
+gem 'bcrypt', '3.1.13'
+gem 'bootsnap', '~> 1.16'
+gem 'puma', '~> 3.12'
+gem 'rack-cors', '2.0.1', require: 'rack/cors'
 gem 'rails'
 gem 'pg'
-gem 'validate_url'
+gem 'validate_url', '1.0.8'
 
 gem 'graphql'
-gem 'graphql-query-resolver'
+gem 'graphql-query-resolver', '0.2.0'
 gem "ar_lazy_preload"
-gem 'search_object'
-gem 'search_object_graphql'
+gem 'search_object', '1.2.3'
+gem 'search_object_graphql', '0.3.1'
 
 
 group :development, :test do
