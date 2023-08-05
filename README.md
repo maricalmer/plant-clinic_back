@@ -20,7 +20,7 @@ plant-clinic is developed using:
 
 ## Ruby gems (non exhaustive)
 
-[![graphql](https://img.shields.io/badge/graphql-1.13.19-red.svg)](https://rubygems.org/gems/graphql) [![graphiql-rails](https://img.shields.io/badge/graphiql--rails-1.9.0-red.svg)](https://rubygems.org/gems/graphiql-rails) [![bcrypt](https://img.shields.io/badge/bcrypt-3.1.19-red.svg)](https://rubygems.org/gems/bcrypt) [![rack-cors](https://img.shields.io/badge/rack--cors-2.0.1-red.svg)](https://rubygems.org/gems/rack-cors) [![ar-lazy-preload](https://img.shields.io/badge/ar_lazy_preload-2.0.0-red.svg)](https://rubygems.org/gems/ar_lazy_preload) [![dotenv-rails](https://img.shields.io/badge/dotenv--rails-2.8.1-red.svg)](https://rubygems.org/gems/dotenv-rails) [![graphql-query-resolver](https://img.shields.io/badge/graphql--query--resolver-0.2.0-red.svg)](https://rubygems.org/gems/graphql-query-resolver)
+[![graphql](https://img.shields.io/badge/graphql-1.10.0-red.svg)](https://rubygems.org/gems/graphql) [![graphiql-rails](https://img.shields.io/badge/graphiql--rails-1.5.0-red.svg)](https://rubygems.org/gems/graphiql-rails) [![bcrypt](https://img.shields.io/badge/bcrypt-3.1.13-red.svg)](https://rubygems.org/gems/bcrypt) [![rack-cors](https://img.shields.io/badge/rack--cors-2.0.1-red.svg)](https://rubygems.org/gems/rack-cors) [![ar-lazy-preload](https://img.shields.io/badge/ar_lazy_preload-2.0.0-red.svg)](https://rubygems.org/gems/ar_lazy_preload) [![dotenv-rails](https://img.shields.io/badge/dotenv--rails-2.8.1-red.svg)](https://rubygems.org/gems/dotenv-rails) [![graphql-query-resolver](https://img.shields.io/badge/graphql--query--resolver-0.2.0-red.svg)](https://rubygems.org/gems/graphql-query-resolver)
 
 ## Run Locally
 
