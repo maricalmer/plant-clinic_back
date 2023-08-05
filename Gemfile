@@ -17,7 +17,7 @@ gem 'rails'
 gem 'pg'
 gem 'validate_url', '1.0.8'
 
-gem 'graphql'
+gem 'graphql', '~> 1.13', '>= 1.13.19'
 gem 'graphql-query-resolver', '0.2.0'
 gem "ar_lazy_preload"
 gem 'search_object', '1.2.3'
