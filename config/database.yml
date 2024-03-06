@@ -15,5 +15,5 @@ test:
   database: plant-clinic_back_test
 
 production:
-  <<: *default
-  database: plant-clinic_back_production
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] =%>
